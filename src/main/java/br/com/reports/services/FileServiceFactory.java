@@ -2,24 +2,17 @@ package br.com.reports.services;
 
 import br.com.reports.entities.enums.ReportTypeEnum;
 import br.com.reports.entities.interfaces.FileReports;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
-@RequiredArgsConstructor//(onConstructor_ = {@Autowired})
+@RequiredArgsConstructor
 @Service
 public class FileServiceFactory {
 
-
     private final Map<String, FileReports> services;
-
-
 
     public FileReports getService(String file) {
         ReportTypeEnum type = ReportTypeEnum.valueOf(file);

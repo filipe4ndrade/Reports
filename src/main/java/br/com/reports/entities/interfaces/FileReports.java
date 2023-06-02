@@ -1,10 +1,14 @@
 package br.com.reports.entities.interfaces;
 
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
 public interface FileReports {
 
-    String getFileReports();
+//    Object getFileReports(Integer id);
+    ByteArrayOutputStream getFileReports(Integer id);
 
-    void generateFileReports();
+    void generateFileReports(Object obj) throws IOException;
 
 }
