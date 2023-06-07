@@ -11,8 +11,6 @@ public enum ReportTypeEnum {
     CLIENT("clientReportService"),
     TRANSACTION("transactionReportService");
 
-
     private final String service;
-
 
 }

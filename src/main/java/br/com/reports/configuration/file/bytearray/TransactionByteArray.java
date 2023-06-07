@@ -1,7 +1,7 @@
-package br.com.reports.configuration.dao;
+package br.com.reports.configuration.file.bytearray;
 
-import br.com.reports.configuration.ConnectionFactory;
 import br.com.reports.configuration.exception.DbException;
+import br.com.reports.configuration.connection.ConnectionFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayOutputStream;

@@ -1,9 +1,8 @@
-package br.com.reports.configuration;
+package br.com.reports.configuration.connection;
 
 import br.com.reports.configuration.exception.DbException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

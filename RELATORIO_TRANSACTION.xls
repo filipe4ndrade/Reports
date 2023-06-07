@@ -1,0 +1,3 @@
+Id,Payment Type,Status,Authorization Code, Installment,Purchase_id
+1,PIX,AUTHORIZED,1234567890,3
+2,PIX,PAID,1234567890,2

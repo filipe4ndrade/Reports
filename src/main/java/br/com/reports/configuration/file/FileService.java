@@ -1,4 +1,4 @@
-package br.com.reports.configuration;
+package br.com.reports.configuration.file;
 
 import org.springframework.stereotype.Component;
 
@@ -8,7 +8,7 @@ import java.io.IOException;
 @Component
 public class FileService {
 
-    public void gerateFileTransaction(Object obj) {
+    public void generateFileTransaction(Object obj) {
 
 
         try {
@@ -33,7 +33,7 @@ public class FileService {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }finally {
-            System.out.println("Generating transaction file reports...");
+            System.out.println("Generating client file reports...");
         }
     }
 

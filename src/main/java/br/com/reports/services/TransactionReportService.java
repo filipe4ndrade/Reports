@@ -1,11 +1,10 @@
 package br.com.reports.services;
 
-import br.com.reports.configuration.FileService;
-import br.com.reports.configuration.dao.TransactionByteArray;
+import br.com.reports.configuration.file.FileService;
+import br.com.reports.configuration.file.bytearray.TransactionByteArray;
 import br.com.reports.entities.interfaces.FileReports;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.io.ByteArrayOutputStream;
 
 @RequiredArgsConstructor
@@ -22,7 +21,8 @@ public class TransactionReportService implements FileReports {
     }
     @Override
     public void generateFileReports(Object obj){
-        fileService.gerateFileTransaction(obj);
+        fileService.generateFileTransaction(obj);
+        System.out.println("Generating client file reports...");
 
     }
 }

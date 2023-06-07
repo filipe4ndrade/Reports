@@ -6,7 +6,6 @@ import java.io.IOException;
 
 public interface FileReports {
 
-//    Object getFileReports(Integer id);
     ByteArrayOutputStream getFileReports(Integer id);
 
     void generateFileReports(Object obj) throws IOException;

@@ -4,7 +4,6 @@ import br.com.reports.entities.enums.ReportTypeEnum;
 import br.com.reports.entities.interfaces.FileReports;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
-
 import java.util.Map;
 
 
@@ -18,7 +17,5 @@ public class FileServiceFactory {
         ReportTypeEnum type = ReportTypeEnum.valueOf(file);
         return services.get(type.getService());
     }
-
-
 
 }

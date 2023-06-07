@@ -20,9 +20,6 @@ public class ReportController {
 
     private final FileServiceFactory fileServiceFactory;
 
-
-
-
     @GetMapping("/report/{type}")
     public ResponseEntity<String> generateReport(@PathVariable String type,
                                                  @RequestParam(required = false) Integer clientId,
@@ -30,11 +27,12 @@ public class ReportController {
                                                  @RequestParam(required = false) LocalDate date,
                                                  @RequestParam(required = false) PaymentTypeEnum paymentType ) throws IOException {
 
-             // String query = generatedQuery.generatedClient(type, clientId, status, date, paymentType);
+        // String query = generatedQuery.generatedClient(type, clientId, status, date, paymentType);
+        // ByteArrayOutputStream reportOutputStream =  fileServiceFactory.getService(type).getFileReports(type, clientId, status, date, paymentType);
 
               ByteArrayOutputStream reportOutputStream =  fileServiceFactory.getService(type).getFileReports(clientId);
-
-              System.out.println(reportOutputStream.toString());
+              fileServiceFactory.getService(type).generateFileReports(reportOutputStream);
+           //   System.out.println(reportOutputStream.toString());
 
 
 
